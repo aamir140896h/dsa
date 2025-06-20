@@ -98,25 +98,25 @@
 //  *******
 // *********
 
-function pattern7(n) {
-  for (let i = 0; i < n; i++) {
-    let rows = "";
-    // space
-    for (let j = 0; j < n - i - 1; j++) {
-      rows += " ";
-    }
+// function pattern7(n) {
+//   for (let i = 0; i < n; i++) {
+//     let rows = "";
+//     // space
+//     for (let j = 0; j < n - i - 1; j++) {
+//       rows += " ";
+//     }
 
-    // stars
-    for (let j = 0; j < 2 * i + 1; j++) {
-      rows += "*";
-    }
-    // space
-    for (let j = 0; j < n - i - 1; j++) {
-      rows += " ";
-    }
-    console.log(rows);
-  }
-}
+//     // stars
+//     for (let j = 0; j < 2 * i + 1; j++) {
+//       rows += "*";
+//     }
+//     // space
+//     for (let j = 0; j < n - i - 1; j++) {
+//       rows += " ";
+//     }
+//     console.log(rows);
+//   }
+// }
 
 // *********
 //  *******
@@ -188,16 +188,48 @@ function pattern7(n) {
 // 0 1 0
 // 1 0 1 0
 
-function pattern11(n) {
-  for (let i = 0; i < n; i++) {
-    let start = i % 2 === 0 ? 1 : 0;
-    let rows = "";
-    for (let j = 0; j < i; j++) {
-      rows += start + " ";
-      start = 1 - start;
-    }
-    console.log(rows);
-  }
-}
+// function pattern11(n) {
+//   for (let i = 0; i < n; i++) {
+//     let start = i % 2 === 0 ? 1 : 0;
+//     let rows = "";
+//     for (let j = 0; j < i; j++) {
+//       rows += start + " ";
+//       start = 1 - start;
+//     }
+//     console.log(rows);
+//   }
+// }
 
-pattern11(6);
+// 1
+// 2 3
+// 4 5 6
+// 7 8 9 10
+// 11 12 13 14 15
+
+// function pattern12(n) {
+//   let num = 1;
+//   for (let i = 1; i <= n; i++) {
+//     let rows = "";
+//     for (let j = 0; j < i; j++) {
+//       rows += num++ + " ";
+//     }
+//     console.log(rows);
+//   }
+// }
+
+// A
+// A B
+// A B C
+// A B C D
+// A B C D E
+
+// function pattern13(n) {
+//   for (let i = 1; i <= n; i++) {
+//     let rows = "";
+//     for (let j = 0; j < i; j++) {
+//       rows += String.fromCharCode(65 + j) + " ";
+//     }
+//     console.log(rows);
+//   }
+// }
+pattern13(5);
