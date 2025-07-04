@@ -27,21 +27,21 @@ function reverseArray(arr, start, end) {
 function rotateByDthPlace(arr, d) {
   const n = arr.length;
   d = d % n;
-  reverseArray(arr, 0, d - 1);
-  reverseArray(arr, d, n - 1);
-  reverseArray(arr, 0, n - 1);
+  reverseArray(arr, 0, d - 1); // Reverse first dth elements
+  reverseArray(arr, d, n - 1); // Reverse the rest
+  reverseArray(arr, 0, n - 1); // Reverse whole array
   return arr;
 }
 const arr1 = [1, 2, 3, 4, 5, 6, 7];
 const d = 2;
 console.log(rotateByDthPlace(arr1, d));
 
-function rotateRightByD(arr, d) {
-  const n = arr.length;
-  d = d % n;
+// function rotateRightByD(arr, d) {
+//   const n = arr.length;
+//   d = d % n;
 
-  reverseArray(arr, n - d, n - 1);
-}
+//   reverseArray(arr, n - d, n - 1);
+// }
 
 // Optimal solution
 // TC O(n)
