@@ -24,13 +24,18 @@ function reverseArray(arr, start, end) {
   }
 }
 
-function rotateByDthPlace(arr, d) {
-  const n = arr.length;
-  d = d % n;
-  reverseArray(arr, 0, d - 1); // Reverse first dth elements
-  reverseArray(arr, d, n - 1); // Reverse the rest
-  reverseArray(arr, 0, n - 1); // Reverse whole array
-  return arr;
+// function rotateByDthPlace(arr, d) {
+//   const n = arr.length;
+//   d = d % n;
+//   reverseArray(arr, 0, d - 1); // Reverse first dth elements
+//   reverseArray(arr, d, n - 1); // Reverse the rest
+//   reverseArray(arr, 0, n - 1); // Reverse whole array
+//   return arr;
+// }
+
+function rotateByDthPlace(arr, k) {
+  k = k % arr.length;
+  console.log(arr.slice(-k).concat(arr.slice(0, -k)));
 }
 const arr1 = [1, 2, 3, 4, 5, 6, 7];
 const d = 2;
